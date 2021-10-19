@@ -1,0 +1,22 @@
+:root {
+  --color-red: #e12454;
+  --color-black: #111111;
+  --color-gray: #898989;
+  --color-footer-text: #adb3b8;
+  --shadow-black: #00000017;
+  --color-dark-blue: #223645;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-black);
+}
