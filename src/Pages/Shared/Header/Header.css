@@ -1,6 +1,11 @@
 .navbar {
   padding: 20px 0;
   box-shadow: 1px 1px 20px 1px var(--shadow-black);
+  background-color: white;
+  width: 100%;
+  position: sticky;
+  top: 0%;
+  z-index: 10;
 }
 
 nav {

@@ -3,8 +3,10 @@
   --color-black: #111111;
   --color-gray: #898989;
   --color-footer-text: #adb3b8;
-  --shadow-black: #00000017;
+  --shadow-black: #00000009;
+  --shadow-black-light: #0000000e;
   --color-dark-blue: #223645;
+  --color-light-blue: #ebf5f5;
 }
 
 * {
@@ -19,4 +21,8 @@ body {
 a {
   text-decoration: none;
   color: var(--color-black);
+}
+
+button {
+  font-family: "Poppins", sans-serif;
 }

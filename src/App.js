@@ -7,6 +7,7 @@ import PageNotFound from "./Pages/PageNotFound/PageNotFound";
 import Register from "./Pages/Register/Register";
 import Login from "./Pages/Login/Login";
 import AuthProvider from "./Context/AuthProvider";
+import Services from "./Services/Services";
 
 function App() {
   return (
@@ -22,7 +23,7 @@ function App() {
               <Home></Home>
             </Route>
             <Route exact path="/services">
-              <Home></Home>
+              <Services></Services>
             </Route>
             <Route exact path="/blog">
               <Home></Home>
