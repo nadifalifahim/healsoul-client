@@ -1,5 +1,13 @@
-Reference site: 
-https://healsoul.thememove.com/home-service/
+#HealSoul Website
 
-Instructions: 
-https://github.com/ProgrammingHero1/healthcare-related-website/blob/main/task_description.md
+### A healthcare service oriented website created using react
+
+Live link: https://react-healthcare-website.web.app
+
+### Functionalities:
+
+- Has private routing functionality
+- Uses firebase authentication
+- Based on vanilla CSS
+- Has a dedicated services page
+- Uses context API

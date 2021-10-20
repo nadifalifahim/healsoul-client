@@ -2,6 +2,8 @@ import React from "react";
 import aboutImg from "../../Images/About/1.jpg";
 import "./About.css";
 
+// About page implemented with private route
+
 const About = () => {
   return (
     <div className="about-container">

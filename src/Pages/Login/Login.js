@@ -4,6 +4,7 @@ import { useState } from "react/cjs/react.development";
 import useFirebase from "../../Hooks/useFirebase";
 import "./Login.css";
 
+// Login Page
 const Login = () => {
   const { signInUsingGoogle, setIsLoading, setUser, signInUsingEmail } =
     useFirebase();
@@ -32,6 +33,7 @@ const Login = () => {
   };
   const handleEmailSignIn = (e) => {
     signInUsingEmail(email, password);
+    history.push(locationURL);
     e.preventDefault();
   };
 

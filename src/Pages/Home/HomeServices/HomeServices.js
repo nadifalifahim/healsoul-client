@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import Service from "../../../Services/Service";
 import "./HomeServices.css";
 
@@ -6,7 +7,7 @@ const HomeServices = () => {
   const [serviceData, setServiceData] = useState([]);
 
   useEffect(() => {
-    fetch("/data.json")
+    fetch("./data.json")
       .then((res) => res.json())
       .then((data) => setServiceData(data));
   }, []);
@@ -26,7 +27,9 @@ const HomeServices = () => {
         ))}
       </div>
       <div className="home-services-content">
-        <button>Explore all services</button>
+        <Link to="/services">
+          <button>Explore all services</button>
+        </Link>
       </div>
     </div>
   );

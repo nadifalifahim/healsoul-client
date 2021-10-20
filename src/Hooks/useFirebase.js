@@ -27,29 +27,23 @@ const useFirebase = () => {
 
   const registerUsingEmailandPassword = (name, email, password) => {
     createUserWithEmailAndPassword(auth, email, password).then((result) => {
-      console.log(result);
       updateProfile(auth.currentUser, { displayName: name });
       verifyEmail();
     });
   };
 
   const verifyEmail = () => {
-    sendEmailVerification(auth.currentUser).then((result) => {
-      console.log(result);
-    });
+    sendEmailVerification(auth.currentUser).then((result) => {});
   };
 
   const signInUsingEmail = (email, password) => {
-    signInWithEmailAndPassword(auth, email, password).then((result) => {
-      console.log(result);
-    });
+    signInWithEmailAndPassword(auth, email, password).then((result) => {});
   };
 
   useEffect(() => {
     onAuthStateChanged(auth, (user) => {
       if (user) {
         setUser(user);
-        console.log(user);
       } else {
         setUser({});
       }

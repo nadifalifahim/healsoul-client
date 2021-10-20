@@ -5,6 +5,8 @@ import { NavLink } from "react-router-dom";
 import "./Header.css";
 import useAuth from "../../../Hooks/useAuth";
 
+// Header Component
+
 const Header = () => {
   const logo = <FontAwesomeIcon icon={faHeartbeat} />;
   const { user, logOut } = useAuth();

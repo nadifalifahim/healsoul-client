@@ -3,7 +3,7 @@ import "./PageNotFound.css";
 import errorimage from "./error.png";
 import { Link } from "react-router-dom";
 
-// Page not found component
+// 404: Page not found
 const PageNotFound = () => {
   return (
     <div className="page-not-found-container">

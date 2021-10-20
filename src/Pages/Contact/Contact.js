@@ -1,6 +1,8 @@
 import React from "react";
 import "./Contact.css";
 
+// Contact page implemented with private route
+
 const Contact = () => {
   return (
     <div className="contact-container">

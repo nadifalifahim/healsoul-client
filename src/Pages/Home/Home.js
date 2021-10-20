@@ -6,6 +6,7 @@ import HomeServices from "./HomeServices/HomeServices";
 import Statistics from "./Statistics/Statistics";
 
 const Home = () => {
+  // Home page
   return (
     <div>
       <Banner></Banner>

@@ -16,6 +16,7 @@ import Contact from "./Pages/Contact/Contact";
 function App() {
   return (
     <div>
+      {/* Routing Set Up*/}
       <AuthProvider>
         <Router>
           <Header></Header>
