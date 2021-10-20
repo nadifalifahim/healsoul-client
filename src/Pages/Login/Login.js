@@ -1,10 +1,23 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useHistory } from "react-router-dom";
 import useFirebase from "../../Hooks/useFirebase";
 import "./Login.css";
 
 const Login = () => {
-  const { signInUsingGoogle } = useFirebase();
+  const { signInUsingGoogle, setIsLoading, setUser } = useFirebase();
+
+  const location = useLocation();
+  const history = useHistory();
+  const locationURL = location.state?.from || "/home";
+
+  const handleGoogleSignIn = () => {
+    signInUsingGoogle()
+      .then((result) => {
+        history.push(locationURL);
+        setUser(result.user);
+      })
+      .finally(() => setIsLoading(false));
+  };
   return (
     <div className="login-container">
       <div>
@@ -21,7 +34,7 @@ const Login = () => {
           </Link>
         </p>
         <div>
-          <button onClick={signInUsingGoogle}>Sign In Using Google</button>
+          <button onClick={handleGoogleSignIn}>Sign In Using Google</button>
         </div>
       </div>
     </div>

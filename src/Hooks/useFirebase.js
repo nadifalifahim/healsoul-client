@@ -13,12 +13,12 @@ const useFirebase = () => {
 
   const [user, setUser] = useState({});
   const auth = getAuth();
+  const [isLoading, setIsLoading] = useState(true);
 
   const signInUsingGoogle = () => {
+    setIsLoading(true);
     const googleProvider = new GoogleAuthProvider();
-    signInWithPopup(auth, googleProvider).then((result) => {
-      setUser(result.user);
-    });
+    return signInWithPopup(auth, googleProvider);
   };
 
   useEffect(() => {
@@ -29,20 +29,23 @@ const useFirebase = () => {
       } else {
         setUser({});
       }
+      setIsLoading(false);
     });
   }, [auth]);
 
   const logOut = () => {
+    setIsLoading(true);
     signOut(auth)
       .then(() => {
         console.log("Signed Out");
       })
       .catch(() => {
         console.log("Couldn't sign out");
-      });
+      })
+      .finally(() => setIsLoading(false));
   };
 
-  return { user, signInUsingGoogle, logOut };
+  return { user, signInUsingGoogle, logOut, isLoading, setIsLoading, setUser };
 };
 
 export default useFirebase;

@@ -8,6 +8,8 @@ import Register from "./Pages/Register/Register";
 import Login from "./Pages/Login/Login";
 import AuthProvider from "./Context/AuthProvider";
 import Services from "./Services/Services";
+import ServiceDetails from "./Pages/ServiceDetails/ServiceDetails";
+import PrivateRoute from "./Pages/Login/PrivateRoute/PrivateRoute";
 
 function App() {
   return (
@@ -25,7 +27,10 @@ function App() {
             <Route exact path="/services">
               <Services></Services>
             </Route>
-            <Route exact path="/blog">
+            <PrivateRoute exact path="/services/:serviceID">
+              <ServiceDetails></ServiceDetails>
+            </PrivateRoute>
+            <Route exact path="/about">
               <Home></Home>
             </Route>
             <Route exact path="/contact">

@@ -29,11 +29,11 @@ const Header = () => {
           <NavLink to="/home" activeClassName="nav-active">
             Home
           </NavLink>
+          <NavLink to="/about" activeClassName="nav-active">
+            About
+          </NavLink>
           <NavLink to="/services" activeClassName="nav-active">
             Services
-          </NavLink>
-          <NavLink to="/blog" activeClassName="nav-active">
-            Blog
           </NavLink>
           <NavLink to="/contact" activeClassName="nav-active">
             Contact
