@@ -60,3 +60,39 @@ nav a:hover {
   background-color: white;
   border-color: var(--color-red);
 }
+
+.logged-in-state {
+  display: flex;
+  align-items: center;
+}
+
+.logged-in-state * {
+  margin: 0 5px;
+}
+
+.logged-in-state img {
+  width: 50px;
+  border-radius: 50%;
+}
+
+.logged-in-state button {
+  color: var(--color-red);
+  background-color: white;
+  border: 1px solid var(--color-red);
+  border-radius: 5px;
+  padding: 8px 5px;
+  font-size: 0.9em;
+  cursor: pointer;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  transition: 0.3s all ease;
+}
+
+.logged-in-state button:hover {
+  color: white;
+  background-color: var(--color-red);
+}
+
+.logged-in-state p {
+  margin-right: 20px;
+}
