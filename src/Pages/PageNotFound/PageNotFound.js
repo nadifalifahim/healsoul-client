@@ -12,7 +12,7 @@ const PageNotFound = () => {
         <h1>Page Not Found!</h1>
         <h5>Please try searching for some other page</h5>
         <Link to="/home">
-          <button>Back to home</button>
+          <button className="red-button">Back to home</button>
         </Link>
       </div>
     </div>

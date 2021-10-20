@@ -52,8 +52,11 @@ const Login = () => {
             onBlur={handlePasswordChange}
             required
           ></input>
-          <button type="submit">Login</button>
+          <button type="submit" className="red-button">
+            Login
+          </button>
         </form>
+        <br />
         <p>
           Don't have an account?{" "}
           <Link className="create-an-account-text" to="/register">
@@ -61,7 +64,9 @@ const Login = () => {
           </Link>
         </p>
         <div>
-          <button onClick={handleGoogleSignIn}>Sign In Using Google</button>
+          <button onClick={handleGoogleSignIn} className="red-button">
+            Sign In Using Google
+          </button>
         </div>
       </div>
     </div>

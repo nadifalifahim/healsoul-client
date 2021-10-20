@@ -24,6 +24,7 @@ const Register = () => {
 
   return (
     <div>
+      <h1>Register</h1>
       <form onSubmit={handleRegistration}>
         <input
           onBlur={handleNameChange}

@@ -2,6 +2,7 @@
   --color-red: #e12454;
   --color-black: #111111;
   --color-gray: #898989;
+  --color-light-gray: #ebebeb;
   --color-footer-text: #adb3b8;
   --shadow-black: #00000009;
   --shadow-black-light: #0000000e;
@@ -24,8 +25,13 @@ a {
 }
 
 button,
-input {
+input,
+textarea {
   font-family: "Poppins", sans-serif;
+}
+
+button {
+  cursor: pointer;
 }
 
 .section-heading {
@@ -44,4 +50,15 @@ input {
   color: var(--color-gray);
   font-size: 1.1em;
   font-weight: 500;
+}
+
+.red-button {
+  background-color: var(--color-red);
+  color: white;
+  border: none;
+  padding: 10px 30px;
+  font-weight: 500;
+  border-radius: 5px;
+  font-size: 1em;
+  margin-top: 20px;
 }

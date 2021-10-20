@@ -17,14 +17,3 @@
   margin: 10px 0 20px;
   color: var(--color-gray);
 }
-
-.page-not-found-container button {
-  background-color: var(--color-red);
-  color: white;
-  border: none;
-  padding: 10px 30px;
-  font-weight: 500;
-  border-radius: 5px;
-  font-size: 1em;
-  margin-top: 20px;
-}
