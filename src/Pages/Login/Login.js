@@ -1,10 +1,12 @@
 import React from "react";
 import { Link, useLocation, useHistory } from "react-router-dom";
+import { useState } from "react/cjs/react.development";
 import useFirebase from "../../Hooks/useFirebase";
 import "./Login.css";
 
 const Login = () => {
-  const { signInUsingGoogle, setIsLoading, setUser } = useFirebase();
+  const { signInUsingGoogle, setIsLoading, setUser, signInUsingEmail } =
+    useFirebase();
 
   const location = useLocation();
   const history = useHistory();
@@ -18,14 +20,39 @@ const Login = () => {
       })
       .finally(() => setIsLoading(false));
   };
+
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  const handleEmailChange = (e) => {
+    setEmail(e.target.value);
+  };
+  const handlePasswordChange = (e) => {
+    setPassword(e.target.value);
+  };
+  const handleEmailSignIn = (e) => {
+    signInUsingEmail(email, password);
+    e.preventDefault();
+  };
+
   return (
     <div className="login-container">
       <div>
         <h1>Login</h1>
-        <form>
-          <input type="text" placeholder="Username or Email"></input>
-          <input type="password" placeholder="Password"></input>
-          <button>Login</button>
+        <form onSubmit={handleEmailSignIn}>
+          <input
+            type="text"
+            placeholder="Username or Email"
+            onBlur={handleEmailChange}
+            required
+          ></input>
+          <input
+            type="password"
+            placeholder="Password"
+            onBlur={handlePasswordChange}
+            required
+          ></input>
+          <button type="submit">Login</button>
         </form>
         <p>
           Don't have an account?{" "}

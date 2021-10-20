@@ -27,3 +27,21 @@ button,
 input {
   font-family: "Poppins", sans-serif;
 }
+
+.section-heading {
+  font-weight: 700;
+  letter-spacing: 5px;
+  color: var(--color-gray);
+  font-size: 1em;
+}
+
+.section-title {
+  font-size: 2.3em;
+  color: var(--color-dark-blue);
+}
+
+.section-content {
+  color: var(--color-gray);
+  font-size: 1.1em;
+  font-weight: 500;
+}

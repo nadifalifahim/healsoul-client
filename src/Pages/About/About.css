@@ -1,0 +1,21 @@
+.about-container {
+  width: 60%;
+  margin: 100px auto;
+  display: flex;
+}
+
+.about-image-container {
+  min-width: 500px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+}
+
+.about-content {
+  margin: 0 100px;
+}
+
+.about-content p {
+}

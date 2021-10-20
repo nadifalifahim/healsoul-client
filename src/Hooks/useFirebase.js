@@ -6,6 +6,10 @@ import {
   GoogleAuthProvider,
   signOut,
   onAuthStateChanged,
+  createUserWithEmailAndPassword,
+  sendEmailVerification,
+  signInWithEmailAndPassword,
+  updateProfile,
 } from "firebase/auth";
 
 const useFirebase = () => {
@@ -19,6 +23,26 @@ const useFirebase = () => {
     setIsLoading(true);
     const googleProvider = new GoogleAuthProvider();
     return signInWithPopup(auth, googleProvider);
+  };
+
+  const registerUsingEmailandPassword = (name, email, password) => {
+    createUserWithEmailAndPassword(auth, email, password).then((result) => {
+      console.log(result);
+      updateProfile(auth.currentUser, { displayName: name });
+      verifyEmail();
+    });
+  };
+
+  const verifyEmail = () => {
+    sendEmailVerification(auth.currentUser).then((result) => {
+      console.log(result);
+    });
+  };
+
+  const signInUsingEmail = (email, password) => {
+    signInWithEmailAndPassword(auth, email, password).then((result) => {
+      console.log(result);
+    });
   };
 
   useEffect(() => {
@@ -45,7 +69,16 @@ const useFirebase = () => {
       .finally(() => setIsLoading(false));
   };
 
-  return { user, signInUsingGoogle, logOut, isLoading, setIsLoading, setUser };
+  return {
+    user,
+    signInUsingGoogle,
+    logOut,
+    isLoading,
+    setIsLoading,
+    setUser,
+    registerUsingEmailandPassword,
+    signInUsingEmail,
+  };
 };
 
 export default useFirebase;

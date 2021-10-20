@@ -1,0 +1,19 @@
+.service-details-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  margin: 50px auto;
+}
+
+.service-details-image-container img {
+  border-radius: 20px;
+}
+
+.service-details-content {
+  margin: 0 100px;
+}
+
+.service-details-content h1 {
+  margin-bottom: 20px;
+}

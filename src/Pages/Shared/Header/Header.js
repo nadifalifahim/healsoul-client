@@ -40,7 +40,6 @@ const Header = () => {
           </NavLink>
         </div>
         <div>
-          {console.log(user)}
           {user?.email ? (
             <div className="logged-in-state">
               {user.photoURL && <img src={user.photoURL} alt="User" />}

@@ -6,16 +6,16 @@ const HomeServices = () => {
   const [serviceData, setServiceData] = useState([]);
 
   useEffect(() => {
-    fetch("data.json")
+    fetch("/data.json")
       .then((res) => res.json())
       .then((data) => setServiceData(data));
   }, []);
   return (
     <div className="home-services-container">
       <div className="home-services-content">
-        <small>OUR SERVICES</small>
-        <h2>Managed heathcare services</h2>
-        <p>
+        <small className="section-heading">OUR SERVICES</small>
+        <h2 className="section-title">Managed heathcare services</h2>
+        <p className="section-content">
           For things like customer service, medical care, billing, we have made
           commitments to providing an exceptionally comprehensive experience.
         </p>
