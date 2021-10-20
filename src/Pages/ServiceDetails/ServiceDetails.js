@@ -1,7 +1,7 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useParams } from "react-router";
 import { Link } from "react-router-dom";
-import { useState } from "react/cjs/react.development";
+
 import "./ServiceDetails.css";
 
 // Service Details Page
@@ -10,7 +10,7 @@ const ServiceDetails = () => {
   const [currentService, setCurrentService] = useState({});
 
   useEffect(() => {
-    fetch("./data.json")
+    fetch("/data.json")
       .then((res) => res.json())
       .then((data) => handleServiceData(data));
   }, []);

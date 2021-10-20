@@ -1,6 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
 import { useHistory, useLocation } from "react-router";
-import { useState } from "react/cjs/react.development";
 import useFirebase from "../../Hooks/useFirebase";
 import "./Register.css";
 
