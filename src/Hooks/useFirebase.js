@@ -26,10 +26,12 @@ const useFirebase = () => {
   };
 
   const registerUsingEmailandPassword = (name, email, password) => {
-    createUserWithEmailAndPassword(auth, email, password).then((result) => {
-      updateProfile(auth.currentUser, { displayName: name });
-      verifyEmail();
-    });
+    createUserWithEmailAndPassword(auth, email, password)
+      .then((result) => {
+        updateProfile(auth.currentUser, { displayName: name });
+        verifyEmail();
+      })
+      .then(signInUsingEmail(email, password));
   };
 
   const verifyEmail = () => {

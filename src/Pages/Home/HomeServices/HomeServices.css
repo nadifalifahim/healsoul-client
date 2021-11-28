@@ -18,7 +18,7 @@
 }
 
 .home-services-content button {
-  background-color: var(--color-red);
+  background-color: var(--color-primary);
   color: white;
   border: none;
   outline: none;

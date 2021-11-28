@@ -52,7 +52,7 @@ button {
   font-weight: 500;
 }
 
-.red-button {
+.back-button {
   background-color: var(--color-red);
   color: white;
   border: none;

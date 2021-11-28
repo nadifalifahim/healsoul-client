@@ -1,13 +1,13 @@
-#HealSoul Website
+# HEALSOUL
 
-### A healthcare service oriented website created using react
+### ADULT HEALTHCARE SERVICE WEBSITE
 
-Live link: https://react-healthcare-website.web.app
+### Live Site: https://react-healthcare-website.web.app
 
-### Functionalities:
+#### Technologies: React, React Router, Firebase, Git
 
-- Has private routing functionality
-- Uses firebase authentication
-- Based on vanilla CSS
-- Has a dedicated services page
-- Uses context API
+#### Description:
+
+- A responsive adult healthcare service providing website
+- Has private routing functionality implemented using react router
+- Uses firebase authentication for registration and login
